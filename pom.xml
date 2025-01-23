@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
 <!--
 
     @formatter:off
@@ -24,10 +25,10 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent-minimal</artifactId>
-		<version>83</version>
+		<version>84-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>ibparent</artifactId>
+	<artifactId>ibparent-root</artifactId>
 	<version>104-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -35,6 +36,8 @@
 
 	<modules>
 		<module>ibexceptions</module>
+		<module>ibconstants</module>
+		<module>ibparent</module>
 	</modules>
 
 	<scm>
@@ -49,6 +52,9 @@
 	</issueManagement>
 
 	<properties>
+		<!-- TODO Should always be changed to this project version!!! -->
+		<ibexceptions.version>104-SNAPSHOT</ibexceptions.version>
+		<ibconstants.version>${ibexceptions.version}</ibconstants.version>
 		<maven.bundle.plugin.version>6.0.0</maven.bundle.plugin.version>
 		<maven.cobertura.version>2.7</maven.cobertura.version>
 		<maven.compiler.jdk.version>17</maven.compiler.jdk.version>
@@ -73,7 +79,6 @@
 		<karaf.maven.plugin.version>4.4.6</karaf.maven.plugin.version>
 		<!-- A default. This may or may not change over time -->
 		<ib.logconfig.version>0.14.4</ib.logconfig.version>
-		<ib.exceptions.version>${project.version}</ib.exceptions.version>
 		<ib.urlclasspath.version>1.0.1</ib.urlclasspath.version>
 		<akka.http.version>2.0.5</akka.http.version>
 		<akka.stream.version>2.0.5</akka.stream.version>
@@ -906,7 +911,7 @@
 				<artifactId>assertj-core</artifactId>
 				<version>${assertj.core.version}</version>
 			</dependency>
-			<!--				
+			<!--
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcmail-jdk15on</artifactId>
@@ -975,7 +980,8 @@
 				<groupId>org.immutables</groupId>
 				<artifactId>bom</artifactId>
 				<version>${org.immutables.version}</version>
-				<!--<scope>import</scope>--> <!-- Add as import-scoped to
+				<!--<scope>import</scope>--> <!-- Add as
+				import-scoped to
 				use -->
 				<type>pom</type>
 			</dependency>
@@ -1403,7 +1409,8 @@
 					<version>${maven.compiler.plugin.version}</version>
 					<configuration>
 						<release>${maven.compiler.jdk.version}</release>
-						<!-- JDK <= 8 <source>${maven.compiler.jdk.version}</source>
+						<!-- JDK <= 8
+						<source>${maven.compiler.jdk.version}</source>
             <target>${maven.compiler.jdk.version}</target> -->
 						<compilerArgs>
 							<arg>-Xlint</arg>
@@ -1652,16 +1659,19 @@
 							<configuration>
 								<haltOnFailure>true</haltOnFailure>
 								<rules>
-									<rule implementation="org.jacoco.maven.RuleConfiguration">
+									<rule
+										implementation="org.jacoco.maven.RuleConfiguration">
 										<element>BUNDLE</element>
 										<limits>
-											<limit implementation="org.jacoco.report.check.Limit">
+											<limit
+												implementation="org.jacoco.report.check.Limit">
 												<counter>INSTRUCTION</counter>
 												<value>COVEREDRATIO</value>
 												<minimum>
 													.${test.coverage.percentage.required}</minimum>
 											</limit>
-											<limit implementation="org.jacoco.report.check.Limit">
+											<limit
+												implementation="org.jacoco.report.check.Limit">
 												<counter>CLASS</counter>
 												<value>MISSEDCOUNT</value>
 												<maximum>

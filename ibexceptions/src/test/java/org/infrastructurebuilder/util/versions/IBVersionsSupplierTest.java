@@ -77,11 +77,6 @@ public class IBVersionsSupplierTest {
   }
 
   @Test
-  public void testIBMavenException() {
-    assertNotNull("Empty maven exception", new IBRepoException());
-  }
-
-  @Test
   public void testNotNull() {
     assertTrue(t.getArtifactDependency().get().contains("g:a:1.2.3"));
   }
