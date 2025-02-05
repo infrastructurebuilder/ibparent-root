@@ -76,7 +76,7 @@
 		<maven.taglist.plugin.version>2.4</maven.taglist.plugin.version>
 		<maven.war.plugin.version>3.4.0</maven.war.plugin.version>
 		<karaf.tooling.version>4.3.0</karaf.tooling.version>
-		<karaf.maven.plugin.version>4.4.6</karaf.maven.plugin.version>
+		<karaf.maven.plugin.version>4.4.7</karaf.maven.plugin.version>
 		<!-- A default. This may or may not change over time -->
 		<ib.logconfig.version>0.14.4</ib.logconfig.version>
 		<ib.urlclasspath.version>1.0.1</ib.urlclasspath.version>
@@ -85,7 +85,7 @@
 		<akka.version>2.5.17</akka.version>
 		<antlr4.version>4.13.2</antlr4.version>
 		<apache.ant.version>1.10.15</apache.ant.version>
-		<apache.commons.codec.version>1.17.2</apache.commons.codec.version>
+		<apache.commons.codec.version>1.18.0</apache.commons.codec.version>
 		<apache.commons.lang3.version>3.17.0</apache.commons.lang3.version>
 		<apache.commons.lang.version>2.6</apache.commons.lang.version>
 		<apache.curator.version>5.7.1</apache.curator.version>
@@ -98,7 +98,7 @@
 		<avaje.jsr305.version>1.2</avaje.jsr305.version>
 		<avro.core.version>1.12.0</avro.core.version>
 		<aws.sdk.version>1.12.780</aws.sdk.version>
-		<aws.sdkv2.bom.version>2.30.4</aws.sdkv2.bom.version>
+		<aws.sdkv2.bom.version>2.30.13</aws.sdkv2.bom.version>
 		<bettercloud.vault.version>5.1.0</bettercloud.vault.version>
 		<better.files.version>2.17.1</better.files.version>
 		<bouncycastle.version>1.70</bouncycastle.version>
@@ -117,7 +117,7 @@
 		<cucumber.jvm.deps.version>1.0.5</cucumber.jvm.deps.version>
 		<discipline.version>0.7.3</discipline.version>
 		<derby.version>10.17.1.0</derby.version>
-		<discord.jda.version>5.2.2</discord.jda.version>
+		<discord.jda.version>5.3.0</discord.jda.version>
 		<dom4j.version>2.1.4</dom4j.version>
 		<dropwizard.version>5.0.0-rc.1</dropwizard.version>
 		<egit.github.version>5.1.0.201809111528-r</egit.github.version>
@@ -182,7 +182,7 @@
 		<jcommander.version>1.82</jcommander.version>
 		<jmh.version>1.37</jmh.version>
 		<joda.convert.version>3.0.1</joda.convert.version>
-		<joda.time.version>2.13.0</joda.time.version>
+		<joda.time.version>2.13.1</joda.time.version>
 		<jooq.jool.version>0.9.15</jooq.jool.version>
 		<jooq.jooq.version>3.19.18</jooq.jooq.version>
 		<jooq.joor.version>0.9.15</jooq.joor.version>
@@ -196,7 +196,7 @@
 		<jsoup.version>1.18.3</jsoup.version>
 		<jtds.version>1.3.1</jtds.version>
 		<junit.interface.version>0.11</junit.interface.version>
-		<junit.jupiter.version>5.11.4</junit.jupiter.version>
+		<junit.jupiter.version>5.12.0-M1</junit.jupiter.version>
 		<junit.platform.maven.plugin.version>1.1.8</junit.platform.maven.plugin.version>
 		<kafka.version>3.9.0</kafka.version>
 		<kamon.version>0.6.5</kamon.version>
@@ -217,7 +217,7 @@
 		<nexus.staging.maven.plugin.version>1.6.7</nexus.staging.maven.plugin.version>
 		<opencsv.version>5.10</opencsv.version>
 		<org.immutables.version>2.10.1</org.immutables.version>
-		<owasp.dependency.check.maven.version>12.0.1</owasp.dependency.check.maven.version>
+		<owasp.dependency.check.maven.version>12.0.2</owasp.dependency.check.maven.version>
 		<pax.url.version>2.6.16</pax.url.version>
 		<play2.maven.plugin.version>1.0.0-rc2</play2.maven.plugin.version>
 		<play2.version>2.7.0</play2.version>
@@ -239,14 +239,14 @@
 		<spotbugs.version>4.9.0</spotbugs.version>
 		<spotify.dataenum.version>1.5.0</spotify.dataenum.version>
 		<spring.boot.maven.plugin.version>3.4.2</spring.boot.maven.plugin.version>
-		<spring.version>6.2.2</spring.version>
+		<spring.version>7.0.0-M1</spring.version>
 		<spring.boot.version>3.4.2</spring.boot.version>
 		<sqlite.jdbc.version>3.48.0.0</sqlite.jdbc.version>
-		<tika.version>3.0.0</tika.version>
+		<tika.version>3.1.0</tika.version>
 		<trove4j.version>3.0.3</trove4j.version>
 		<typesafe.config.version>1.4.3</typesafe.config.version>
 		<validation.api.version>2.0.1.Final</validation.api.version>
-		<vavr.version>0.10.5</vavr.version>
+		<vavr.version>0.10.6</vavr.version>
 		<velocity.version>2.4.1</velocity.version>
 		<vert.spring.ext.version>2.4</vert.spring.ext.version>
 		<vertx.guice.version>2.3.1</vertx.guice.version>
