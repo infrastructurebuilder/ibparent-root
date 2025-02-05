@@ -33,11 +33,6 @@
 
 	<url>${ib.site.view.url}/</url>
 
-	<properties>
-		<!-- TODO Should always be changed to targeted release version!!! -->
-		<ibexceptions.version>104</ibexceptions.version>
-		<ibconstants.version>104</ibconstants.version>
-	</properties>
 
 	<dependencyManagement>
 		<dependencies>
