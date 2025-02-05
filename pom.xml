@@ -53,7 +53,7 @@
 
 	<properties>
 		<!-- TODO Should always be changed to this project version!!! -->
-		<ibexceptions.version>104-SNAPSHOT</ibexceptions.version>
+		<ibexceptions.version>104</ibexceptions.version>
 		<ibconstants.version>${ibexceptions.version}</ibconstants.version>
 		<maven.bundle.plugin.version>6.0.0</maven.bundle.plugin.version>
 		<maven.cobertura.version>2.7</maven.cobertura.version>

@@ -48,13 +48,5 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
-		<dependency>
-			<groupId>org.infrastructurebuilder</groupId>
-			<artifactId>ibexceptions</artifactId>
-		</dependency>
-			<dependency>
-				<groupId>org.infrastructurebuilder</groupId>
-				<artifactId>ibconstants</artifactId>
-			</dependency>
 	</dependencies>
 </project>
