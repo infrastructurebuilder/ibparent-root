@@ -44,12 +44,12 @@
 			<dependency>
 				<groupId>org.infrastructurebuilder</groupId>
 				<artifactId>ibexceptions</artifactId>
-				<version>${ibexceptions.version}</version>
+				<version>104</version>
 			</dependency>
 			<dependency>
 				<groupId>org.infrastructurebuilder</groupId>
 				<artifactId>ibconstants</artifactId>
-				<version>${ibconstants.version}</version>
+				<version>104</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
