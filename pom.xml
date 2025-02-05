@@ -19,7 +19,7 @@
     @formatter:on
 
 -->
-<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -243,6 +243,8 @@
 		<spring.boot.version>3.4.2</spring.boot.version>
 		<sqlite.jdbc.version>3.48.0.0</sqlite.jdbc.version>
 		<tika.version>3.1.0</tika.version>
+		<toolfactory.narcissus.version>1.0.7</toolfactory.narcissus.version>
+		<toolfactory.jvmdriver.version>9.7.1</toolfactory.jvmdriver.version>
 		<trove4j.version>3.0.3</trove4j.version>
 		<typesafe.config.version>1.4.3</typesafe.config.version>
 		<validation.api.version>2.0.1.Final</validation.api.version>
@@ -583,6 +585,18 @@
 				<artifactId>vertx-jooq-shared</artifactId>
 				<version>${vertx.jooq.version}</version>
 			</dependency>
+        <dependency>
+            <groupId>io.github.toolfactory</groupId>
+            <artifactId>narcissus</artifactId>
+            <version>${toolfactory.narcissus.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.toolfactory</groupId>
+            <artifactId>jvm-driver</artifactId>
+            <version>${toolfactory.jvmdriver.version}</version>
+            <optional>true</optional>
+        </dependency>
 			<dependency>
 				<groupId>io.kamon</groupId>
 				<artifactId>sigar-loader</artifactId>
