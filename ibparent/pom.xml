@@ -33,7 +33,6 @@
 
 	<url>${ib.site.view.url}/</url>
 
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

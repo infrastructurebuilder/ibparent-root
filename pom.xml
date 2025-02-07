@@ -52,9 +52,6 @@
 	</issueManagement>
 
 	<properties>
-		<!-- TODO Should always be changed to this project version!!! -->
-		<ibexceptions.version>104</ibexceptions.version>
-		<ibconstants.version>${ibexceptions.version}</ibconstants.version>
 		<maven.bundle.plugin.version>6.0.0</maven.bundle.plugin.version>
 		<maven.cobertura.version>2.7</maven.cobertura.version>
 		<maven.compiler.jdk.version>17</maven.compiler.jdk.version>
@@ -1423,7 +1420,8 @@
 					<version>${maven.compiler.plugin.version}</version>
 					<configuration>
 						<release>${maven.compiler.jdk.version}</release>
-						<!-- JDK <= 8 <source>${maven.compiler.jdk.version}</source>
+						<!-- JDK <= 8
+						<source>${maven.compiler.jdk.version}</source>
             <target>${maven.compiler.jdk.version}</target> -->
 						<compilerArgs>
 							<arg>-Xlint</arg>
@@ -1672,16 +1670,19 @@
 							<configuration>
 								<haltOnFailure>true</haltOnFailure>
 								<rules>
-									<rule implementation="org.jacoco.maven.RuleConfiguration">
+									<rule
+										implementation="org.jacoco.maven.RuleConfiguration">
 										<element>BUNDLE</element>
 										<limits>
-											<limit implementation="org.jacoco.report.check.Limit">
+											<limit
+												implementation="org.jacoco.report.check.Limit">
 												<counter>INSTRUCTION</counter>
 												<value>COVEREDRATIO</value>
 												<minimum>
 													.${test.coverage.percentage.required}</minimum>
 											</limit>
-											<limit implementation="org.jacoco.report.check.Limit">
+											<limit
+												implementation="org.jacoco.report.check.Limit">
 												<counter>CLASS</counter>
 												<value>MISSEDCOUNT</value>
 												<maximum>
