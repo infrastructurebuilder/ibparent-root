@@ -29,7 +29,7 @@
 	</parent>
 
 	<artifactId>ibparent-root</artifactId>
-	<version>105-SNAPSHOT</version>
+	<version>105</version>
 	<packaging>pom</packaging>
 
 	<url>${ib.site.view.url}/</url>
@@ -44,7 +44,7 @@
 		<connection>scm:git:${git.url}</connection>
 		<developerConnection>scm:git:${git.url}</developerConnection>
 		<url>${git.scm.url}</url>
-		<tag>HEAD</tag>
+		<tag>ibparent-root-105</tag>
 	</scm>
 	<issueManagement>
 		<url>${github.url.base}/ibparent/issues</url>
@@ -1459,8 +1459,7 @@
 					<version>${maven.compiler.plugin.version}</version>
 					<configuration>
 						<release>${maven.compiler.jdk.version}</release>
-						<!-- JDK <= 8
-						<source>${maven.compiler.jdk.version}</source>
+						<!-- JDK <= 8 <source>${maven.compiler.jdk.version}</source>
             <target>${maven.compiler.jdk.version}</target> -->
 						<compilerArgs>
 							<arg>-Xlint</arg>
@@ -1709,19 +1708,16 @@
 							<configuration>
 								<haltOnFailure>true</haltOnFailure>
 								<rules>
-									<rule
-										implementation="org.jacoco.maven.RuleConfiguration">
+									<rule implementation="org.jacoco.maven.RuleConfiguration">
 										<element>BUNDLE</element>
 										<limits>
-											<limit
-												implementation="org.jacoco.report.check.Limit">
+											<limit implementation="org.jacoco.report.check.Limit">
 												<counter>INSTRUCTION</counter>
 												<value>COVEREDRATIO</value>
 												<minimum>
 													.${test.coverage.percentage.required}</minimum>
 											</limit>
-											<limit
-												implementation="org.jacoco.report.check.Limit">
+											<limit implementation="org.jacoco.report.check.Limit">
 												<counter>CLASS</counter>
 												<value>MISSEDCOUNT</value>
 												<maximum>
