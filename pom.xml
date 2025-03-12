@@ -1114,7 +1114,7 @@
 				<artifactId>junit-jupiter</artifactId>
 				<version>${junit.jupiter.version}</version>
 			</dependency>
-			  <dependency> <!-- LGPL -->
+			  <dependency><!-- LGPL -->
     <groupId>org.sentrysoftware</groupId>
     <artifactId>jawk</artifactId>
     <version>${org.sentrysoftware.jawk.version}</version>
