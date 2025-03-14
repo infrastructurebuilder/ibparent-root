@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE project>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE project>
+
 <!--
 
     @formatter:off
@@ -20,50 +20,49 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.infrastructurebuilder</groupId>
-		<artifactId>ibparent-root</artifactId>
-		<version>106-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>org.infrastructurebuilder</groupId>
+    <artifactId>ibparent-root</artifactId>
+    <version>106-SNAPSHOT</version>
+  </parent>
 
-	<artifactId>ibconstants</artifactId>
-	<packaging>jar</packaging>
+  <artifactId>ibconstants</artifactId>
+  <packaging>jar</packaging>
 
-	<name>${project.artifactId}</name>
-	<description>Lightly encumberd Standard interfaces (and exceptions) for
-		JVM-based applications within IB codebases</description>
-	<!-- URL for site gen -->
-	<url>${github.url.base}/${project.artifactId}</url>
+  <name>${project.artifactId}</name>
+  <description>Lightly encumberd Standard interfaces (and exceptions) JVM-based applications within IB codebases</description>
+  <!-- URL for site gen -->
+  <url>${github.url.base}/${project.artifactId}</url>
 
-	<properties>
-		<surefire.failIfNoTests>false</surefire.failIfNoTests>
-		<test.coverage.percentage.required>0</test.coverage.percentage.required>
-		<jacoco.max.missed.classes>2</jacoco.max.missed.classes>
-	</properties>
+  <properties>
+    <surefire.failIfNoTests>false</surefire.failIfNoTests>
+    <test.coverage.percentage.required>0</test.coverage.percentage.required>
+    <jacoco.max.missed.classes>2</jacoco.max.missed.classes>
+  </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
 
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.infrastructurebuilder.usurped</groupId>
-			<artifactId>jsonassert</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.infrastructurebuilder.usurped</groupId>
+      <artifactId>jsonassert</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE project>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE project>
+
 <!--
 
     @formatter:off
@@ -20,33 +20,32 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.infrastructurebuilder</groupId>
-		<artifactId>ibparent-root</artifactId>
-		<version>106-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>org.infrastructurebuilder</groupId>
+    <artifactId>ibparent-root</artifactId>
+    <version>106-SNAPSHOT</version>
+  </parent>
 
-	<artifactId>ibparent</artifactId>
-	<packaging>pom</packaging>
+  <artifactId>ibparent</artifactId>
+  <packaging>pom</packaging>
 
-	<url>${ib.site.view.url}/</url>
+  <url>${ib.site.view.url}/</url>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.infrastructurebuilder</groupId>
-				<artifactId>ibexceptions</artifactId>
-				<version>106-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>org.infrastructurebuilder</groupId>
-				<artifactId>ibconstants</artifactId>
-				<version>106-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	<dependencies>
-	</dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.infrastructurebuilder</groupId>
+        <artifactId>ibexceptions</artifactId>
+        <version>106-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.infrastructurebuilder</groupId>
+        <artifactId>ibconstants</artifactId>
+        <version>106-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies/>
 </project>
