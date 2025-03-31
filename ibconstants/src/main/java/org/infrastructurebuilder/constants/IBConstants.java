@@ -68,13 +68,14 @@ public interface IBConstants {
   // IBData's preferred content type for protobug is PROTOBUF3
   String PROTOBUF3 = "application/protobuf";
   String TEXT_CSV = "text/csv";
-  String TEXT_CSV_WITH_HEADER = "text/csv;header";
+  String HEADER = ";header";
+  String TEXT_CSV_WITH_HEADER = TEXT_CSV + HEADER;
   String TEXT_HTML = "text/html";
   String TEXT_PLAIN = "text/plain";
   String TEXT_PSV = "text/pipe-separated-values";
-  String TEXT_PSV_WITH_HEADER = "text/pipe-separated-values;header";
+  String TEXT_PSV_WITH_HEADER = TEXT_PSV + HEADER;
   String TEXT_TSV = "text/tab-separated-values";
-  String TEXT_TSV_WITH_HEADER = "text/tab-separated-values;header";
+  String TEXT_TSV_WITH_HEADER = TEXT_TSV + HEADER;
   String VIDEO_AVI_1 = "video/avi";
 //   String LIQUIBASE_SCHEMA = "application/liquibase-schema+xml";
 
@@ -115,17 +116,19 @@ public interface IBConstants {
   String NLD_JSON_EXT = "nldjson";
 
   String _SHA512 = "sha512";
+  String _SHA256 = "sha256";
   String ASC_EXT = "asc";
   String DEFAULT_EXTENSION = BIN;
 
-  List<String> CHECKSUM_TYPES_DEFAULT = Arrays.asList(_SHA512);
+  List<String> CHECKSUM_TYPES_DEFAULT = Arrays.asList(_SHA256);
 
   Optional<String> CHECKSUM_TYPES_SHA512 = Optional.of(_SHA512);
+  Optional<String> CHECKSUM_TYPES_SHA256 = Optional.of(_SHA256);
 
   DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS").withLocale(Locale.US)
       .withZone(ZoneId.of("Z"));
 
-  String DIGEST_TYPE = "SHA-512";
+  String DIGEST_TYPE = "SHA-256";
   String DIRECTORY_PERMISSIONS = "directoryPermissions";
   String EXPORTED = "ExportedInsecureTestKeyrings";
   String FACTORY_NAME = "org.infrastructurebuilder.core.config.CoreCryptoProviderFactory";
@@ -156,6 +159,7 @@ public interface IBConstants {
 
   String ROOTPATH = "org/infrastructurebuilder/test/keys";
   String SHA512 = _SHA512;
+  String SHA256 = _SHA256;
   String SOURCE_LEVEL = "sourceLevel";
   String SYMMETRIC_PREFIX = "*#*";
   String TXT_EXT = ".txt";
