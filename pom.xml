@@ -19,13 +19,13 @@
     @formatter:on
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.infrastructurebuilder</groupId>
     <artifactId>ibparent-minimal</artifactId>
-    <version>86</version>
+    <version>87</version>
   </parent>
 
   <artifactId>ibparent-root</artifactId>
@@ -60,7 +60,7 @@
     <maven.compiler.jdk.version>17</maven.compiler.jdk.version>
     <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
     <maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
-    <maven.failsafe.plugin.version>3.5.2</maven.failsafe.plugin.version>
+    <maven.failsafe.plugin.version>3.5.3</maven.failsafe.plugin.version>
     <maven.javadoc.plugin.version>3.11.2</maven.javadoc.plugin.version>
     <maven.jdepend.plugin.version>2.0</maven.jdepend.plugin.version>
     <maven.jxr.plugin.version>2.5</maven.jxr.plugin.version>
@@ -95,7 +95,7 @@
     <avaje.jsr305.version>1.2</avaje.jsr305.version>
     <avro.core.version>1.12.0</avro.core.version>
     <aws.sdk.version>1.12.782</aws.sdk.version>
-    <aws.sdkv2.bom.version>2.31.11</aws.sdkv2.bom.version>
+    <aws.sdkv2.bom.version>2.31.14</aws.sdkv2.bom.version>
     <azure.unified.sdk.version>2.49.0</azure.unified.sdk.version>
     <better.files.version>2.17.1</better.files.version>
     <bettercloud.vault.version>5.1.0</bettercloud.vault.version>
@@ -154,7 +154,7 @@
     <jacoco.skip>false</jacoco.skip>
     <jacoco.ut.execution.data.file>${project.build.directory}/jacoco-ut.data</jacoco.ut.execution.data.file>
     <jacoco.ut.execution.dest.file>${jacoco.ut.execution.data.file}</jacoco.ut.execution.dest.file>
-    <jacoco.version>0.8.12</jacoco.version>
+    <jacoco.version>0.8.13</jacoco.version>
     <jandex.maven.plugin.version>1.2.3</jandex.maven.plugin.version>
     <jarsigner.skip>true</jarsigner.skip>
     <java.emoji.java.version>5.1.1</java.emoji.java.version>
@@ -183,7 +183,7 @@
     <joda.convert.version>3.0.1</joda.convert.version>
     <joda.time.version>2.14.0</joda.time.version>
     <jooq.jool.version>0.9.15</jooq.jool.version>
-    <jooq.jooq.version>3.20.2</jooq.jooq.version>
+    <jooq.jooq.version>3.20.3</jooq.jooq.version>
     <jooq.joor.version>0.9.15</jooq.joor.version>
     <jooq.joox.version>1.6.2</jooq.joox.version>
     <jpastreamer.quarkus.version>3.0.3.Final</jpastreamer.quarkus.version>
