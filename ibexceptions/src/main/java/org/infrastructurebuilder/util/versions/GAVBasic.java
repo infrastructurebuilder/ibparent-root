@@ -24,15 +24,21 @@ import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
 
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
 
 import org.infrastructurebuilder.exceptions.IBException;
+import org.infrastructurebuilder.util.comparators.BasicTComparator;
+import org.infrastructurebuilder.util.comparators.OptComparators;
+import org.infrastructurebuilder.util.comparators.OptComparators.OptionalComparator;
 
 public interface GAVBasic extends Comparable<GAVBasic> {
   public static final String DELIMITER = ":";
   public static final String BASIC_PACKAGING = "jar";
+  public final static OptionalComparator<String> OPTIONAL_STRING_COMPARATOR = OptComparators
+      .absentLastComparator(BasicTComparator.STRING_COMPARATOR);
   String SNAPSHOT_DESIGNATOR = "-SNAPSHOT";
 
   default Optional<String> asMavenDependencyGet() {
@@ -155,18 +161,8 @@ public interface GAVBasic extends Comparable<GAVBasic> {
     int cmp = getGroupId().compareTo(o.getGroupId());
     if (cmp == 0) {
       cmp = getArtifactId().compareTo(o.getArtifactId());
-      if (cmp == 0) {
-        var e = getExtension();
-        var o1 = o.getExtension();
-        if (e.isPresent()) {
-          if (o1.isPresent())
-            cmp = e.get().compareTo(o1.get());
-        } else {
-          if (o1.isPresent())
-            cmp = 1;
-        }
-      }
-
+      if (cmp == 0)
+        cmp = OPTIONAL_STRING_COMPARATOR.compare(getExtension(), o.getExtension());
     }
     if (cmp == 0) {
       cmp = IBException.cet.returns(() -> {
@@ -178,14 +174,7 @@ public interface GAVBasic extends Comparable<GAVBasic> {
   }
 
   default int compareVersion(final GAVBasic otherVersion) {
-    final String v = otherVersion.getVersion().orElse(null);
-    final String q = getVersion().orElse(null);
-    if (q == null && v == null)
-      return 0;
-    if (q == null)
-      return -1;
-    return q.compareTo(v);
-
+    return OPTIONAL_STRING_COMPARATOR.compare(getVersion(), otherVersion.getVersion());
   }
 
 }

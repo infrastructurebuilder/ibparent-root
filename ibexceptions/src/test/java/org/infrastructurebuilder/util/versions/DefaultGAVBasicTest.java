@@ -46,6 +46,9 @@ class DefaultGAVBasicTest {
   private static final String SIGPATH = GROUPID + DELIMITER + ARTIFACTID + DELIMITER + BASIC_PACKAGING + DELIMITER
       + VERSION;
   private static final String MODELID = DEPGETSTRING;
+  private static final String VERSION2_SNAP = VERSION2 + GAVBasic.SNAPSHOT_DESIGNATOR;
+  private static final String SIGPATH_SNAP = GROUPID + DELIMITER + ARTIFACTID + DELIMITER + VERSION2_SNAP;
+
 
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
@@ -55,7 +58,7 @@ class DefaultGAVBasicTest {
   static void tearDownAfterClass() throws Exception {
   }
 
-  private GAVBasic gav, gv2, gv3, gv4, gv5, gv6, gv7, gv8;
+  private GAVBasic gav, gv2, gv3, gv4, gv5, gv6, gv7, gv8, sps;
 
   @BeforeEach
   void setUp() throws Exception {
@@ -67,6 +70,7 @@ class DefaultGAVBasicTest {
     this.gv6 = new DefaultGAVBasic(GROUPID, ARTIFACTID, CLASSIFIER, VERSION, null);
     this.gv7 = new DefaultGAVBasic(GROUPID, ARTIFACTID, null, VERSION, null);
     this.gv8 = new DefaultGAVBasic(GROUPID, ARTIFACTID, CLASSIFIER, VERSION2, BASIC_PACKAGING);
+    this.sps = new DefaultGAVBasic(SIGPATH_SNAP);
   }
 
   @AfterEach
@@ -126,6 +130,12 @@ class DefaultGAVBasicTest {
     assertEquals(this.gav, this.gav);
     assertNotEquals(this.gav, APIVERSION);
     assertEquals(DEPGETSTRING + DELIMITER + GAVBasic.BASIC_PACKAGING, this.gav.asMavenDependencyGet().get());
+  }
+
+  @Test
+  void testIsSnapshot() {
+    assertFalse(this.gav.isSnapshot());
+    assertTrue(this.sps.isSnapshot());
   }
 
 }

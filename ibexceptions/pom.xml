@@ -40,7 +40,7 @@
     <!--  Cant figure out how to test a piece inside of the exception translator  -->
     <!-- Apparently, the default impls in ExceptionTranslator don't show up in
     coverage -->
-    <test.coverage.percentage.required>91</test.coverage.percentage.required>
+    <test.coverage.percentage.required>93</test.coverage.percentage.required>
     <jacoco.max.missed.classes>1</jacoco.max.missed.classes>
 
   </properties>
