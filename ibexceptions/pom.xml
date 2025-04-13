@@ -42,7 +42,6 @@
     coverage -->
     <test.coverage.percentage.required>93</test.coverage.percentage.required>
     <jacoco.max.missed.classes>1</jacoco.max.missed.classes>
-
   </properties>
 
   <dependencies>
@@ -56,14 +55,12 @@
       <artifactId>junit-vintage-engine</artifactId>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>com.mscharhag.oleaster</groupId>
       <artifactId>oleaster-matcher</artifactId>
       <version>0.1.0</version>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -113,7 +110,6 @@
           </execution>
         </executions>
       </plugin>
-
     </plugins>
   </build>
 </project>

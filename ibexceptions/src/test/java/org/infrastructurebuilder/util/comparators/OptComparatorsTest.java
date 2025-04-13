@@ -29,7 +29,7 @@ import org.junit.jupiter.api.Test;
 
 class OptComparatorsTest {
 
-  Optional<String> a = Optional.of("A"), b= Optional.of("B");
+  Optional<String> a = Optional.of("A"), b = Optional.of("B");
   Optional<String> empty = Optional.empty();
 
   Comparator<String> comp = BasicTComparator.STRING_COMPARATOR;
@@ -52,8 +52,8 @@ class OptComparatorsTest {
     assertTrue(af.compare(a, b) < 0);
     assertTrue(af.compare(b, a) > 0);
     assertTrue(af.compare(empty, empty) == 0);
-    assertTrue(af.compare(a,empty) < 0);
-    assertTrue(af.compare(empty,a) > 0);
+    assertTrue(af.compare(a, empty) < 0);
+    assertTrue(af.compare(empty, a) > 0);
   }
 
   @Test
@@ -62,8 +62,8 @@ class OptComparatorsTest {
     assertTrue(al.compare(a, b) < 0);
     assertTrue(al.compare(b, a) > 0);
     assertTrue(al.compare(empty, empty) == 0);
-    assertTrue(al.compare(a,empty) > 0);
-    assertTrue(al.compare(empty,a) < 0);
+    assertTrue(al.compare(a, empty) > 0);
+    assertTrue(al.compare(empty, a) < 0);
   }
 
 }

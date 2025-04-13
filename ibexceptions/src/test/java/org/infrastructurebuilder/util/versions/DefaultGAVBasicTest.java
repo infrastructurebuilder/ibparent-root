@@ -49,7 +49,6 @@ class DefaultGAVBasicTest {
   private static final String VERSION2_SNAP = VERSION2 + GAVBasic.SNAPSHOT_DESIGNATOR;
   private static final String SIGPATH_SNAP = GROUPID + DELIMITER + ARTIFACTID + DELIMITER + VERSION2_SNAP;
 
-
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
   }

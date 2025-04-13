@@ -19,7 +19,7 @@ package org.infrastructurebuilder.util.comparators;
 
 import java.util.Comparator;
 
-public class BasicTComparator<T extends Comparable<T>> implements Comparator<T>{
+public class BasicTComparator<T extends Comparable<T>> implements Comparator<T> {
   public static final Comparator<String> STRING_COMPARATOR = new BasicTComparator<String>();;
 
   @Override
