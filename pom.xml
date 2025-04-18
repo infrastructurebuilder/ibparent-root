@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.infrastructurebuilder</groupId>
     <artifactId>ibparent-minimal</artifactId>
-    <version>88-SNAPSHOT</version>
+    <version>89</version>
   </parent>
 
   <artifactId>ibparent-root</artifactId>
@@ -82,10 +82,10 @@
     <apache.commons.codec.version>1.18.0</apache.commons.codec.version>
     <apache.commons.lang.version>2.6</apache.commons.lang.version>
     <apache.commons.lang3.version>3.17.0</apache.commons.lang3.version>
-    <apache.commons.text.version>1.13.0</apache.commons.text.version>
+    <apache.commons.text.version>1.13.1</apache.commons.text.version>
     <apache.curator.version>5.8.0</apache.curator.version>
     <apache.httpclient.version>4.5.14</apache.httpclient.version>
-    <apache.poi.version>5.4.0</apache.poi.version>
+    <apache.poi.version>5.4.1</apache.poi.version>
     <apache.shiro.version>1.13.0</apache.shiro.version>
     <apiguardian.api.version>1.1.2</apiguardian.api.version>
     <aspectj.version>1.9.23</aspectj.version>
@@ -93,7 +93,7 @@
     <avaje.jsr305.version>1.2</avaje.jsr305.version>
     <avro.core.version>1.12.0</avro.core.version>
     <aws.sdk.version>1.12.782</aws.sdk.version>
-    <aws.sdkv2.bom.version>2.31.14</aws.sdkv2.bom.version>
+    <aws.sdkv2.bom.version>2.31.24</aws.sdkv2.bom.version>
     <azure.unified.sdk.version>2.49.0</azure.unified.sdk.version>
     <better.files.version>2.17.1</better.files.version>
     <bettercloud.vault.version>5.1.0</bettercloud.vault.version>
@@ -104,7 +104,7 @@
     <commons.dbcp.version>1.4</commons.dbcp.version>
     <commons.dbcp2.version>2.13.0</commons.dbcp2.version>
     <commons.email.version>1.6.0</commons.email.version>
-    <commons.io.version>2.18.0</commons.io.version>
+    <commons.io.version>2.19.0</commons.io.version>
     <commons.pool.version>1.6</commons.pool.version>
     <commons.vfs2.version>2.10.0</commons.vfs2.version>
     <corn.cps.version>1.1.10</corn.cps.version>
@@ -113,7 +113,7 @@
     <cucumber.jvm.deps.version>1.0.5</cucumber.jvm.deps.version>
     <derby.version>10.17.1.0</derby.version>
     <discipline.version>0.7.3</discipline.version>
-    <discord.jda.version>5.3.1</discord.jda.version>
+    <discord.jda.version>5.3.2</discord.jda.version>
     <dom4j.version>2.1.4</dom4j.version>
     <dropwizard.version>5.0.0-rc.2</dropwizard.version>
     <egit.github.version>5.1.0.201809111528-r</egit.github.version>
@@ -133,12 +133,12 @@
     <github.site.plugin.version>0.11</github.site.plugin.version>
     <github.url.base>https://${github.host}/${team.group.id}</github.url.base>
     <gmavenplus.plugin.version>4.1.1</gmavenplus.plugin.version>
-    <google.dagger.version>2.56.1</google.dagger.version>
-    <google.guava.version>33.4.6-jre</google.guava.version>
+    <google.dagger.version>2.56.2</google.dagger.version>
+    <google.guava.version>33.4.8-jre</google.guava.version>
     <google.inject.guice.version>7.0.0</google.inject.guice.version>
     <google.maps.services.version>2.2.0</google.maps.services.version>
-    <google.protobuf.java.version>4.30.2</google.protobuf.java.version>
-    <graalvm.polyglot.version>24.2.0</graalvm.polyglot.version>
+    <google.protobuf.java.version>4.31.0-RC1</google.protobuf.java.version>
+    <graalvm.polyglot.version>24.2.1</graalvm.polyglot.version>
     <h2.database.version>2.3.232</h2.database.version>
     <haikunator.version>2.0.1</haikunator.version>
     <hazelcast.version>5.5.0</hazelcast.version>
@@ -188,6 +188,7 @@
     <jpastreamer.version>3.0.4</jpastreamer.version>
     <jsch.version>0.1.55</jsch.version>
     <json.version>20250107</json.version>
+    <json.skema.version>0.20.0</json.skema.version>
     <jsonassert.version>1.5.1.1</jsonassert.version>
     <jsonschema2pojo.version>1.2.2</jsonschema2pojo.version>
     <jsoup.version>1.19.1</jsoup.version>
@@ -204,11 +205,11 @@
     <lambdaworks.jacks.version>2.5.2</lambdaworks.jacks.version>
     <logback.version>1.5.18</logback.version>
     <!-- was 1.2.3 -->
-    <logstash.logback.encoder.version>8.0</logstash.logback.encoder.version>
+    <logstash.logback.encoder.version>8.1</logstash.logback.encoder.version>
     <lombok.version>1.18.38</lombok.version>
     <mariadb.java.client.version>3.5.3</mariadb.java.client.version>
     <mockito.core.version>2.21.0</mockito.core.version>
-    <mockito.version>5.16.1</mockito.version>
+    <mockito.version>5.17.0</mockito.version>
     <moditect.maven.plugin.version>1.2.2.Final</moditect.maven.plugin.version>
     <moshi.version>1.15.2</moshi.version>
     <mybatis.version>3.5.19</mybatis.version>
@@ -218,7 +219,7 @@
     <opencsv.version>5.10</opencsv.version>
     <org.immutables.version>2.10.1</org.immutables.version>
     <org.sentrysoftware.jawk.version>3.3.04</org.sentrysoftware.jawk.version>
-    <owasp.dependency.check.maven.version>12.1.0</owasp.dependency.check.maven.version>
+    <owasp.dependency.check.maven.version>12.1.1</owasp.dependency.check.maven.version>
     <pax.url.version>3.0.0</pax.url.version>
     <play2.maven.plugin.version>1.0.0-rc2</play2.maven.plugin.version>
     <play2.version>2.7.0</play2.version>
@@ -241,10 +242,10 @@
     <spotify.dataenum.version>1.5.0</spotify.dataenum.version>
     <spring.boot.maven.plugin.version>3.4.4</spring.boot.maven.plugin.version>
     <spring.boot.version>3.4.4</spring.boot.version>
-    <spring.version>7.0.0-M3</spring.version>
+    <spring.version>7.0.0-M4</spring.version>
     <sqlite.jdbc.version>3.49.1.0</sqlite.jdbc.version>
     <tika.version>3.1.0</tika.version>
-    <toolfactory.jvmdriver.version>9.7.1</toolfactory.jvmdriver.version>
+    <toolfactory.jvmdriver.version>9.8.0</toolfactory.jvmdriver.version>
     <toolfactory.narcissus.version>1.0.7</toolfactory.narcissus.version>
     <trove4j.version>3.0.3</trove4j.version>
     <typesafe.config.version>1.4.3</typesafe.config.version>
@@ -350,6 +351,11 @@
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.erosb</groupId>
+        <artifactId>json-sKema</artifactId>
+        <version>${json.skema.version}</version>
       </dependency>
       <dependency>
         <groupId>com.github.fge</groupId>
