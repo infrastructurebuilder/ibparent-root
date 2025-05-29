@@ -16,6 +16,19 @@ class DefaultExceptionTranslator implements ExceptionTranslator {
     }
 
     @Override
+    public void swallow(TryBlock tryBlock) {
+      Arguments.ensureNotNull(tryBlock, "null is not a valid argument for ET.translate()");
+      this.returns(() -> {
+        try {
+          tryBlock.run();
+        } catch (Throwable t) {
+          // This is dangerous AF
+        }
+        return null;
+      });
+    }
+
+    @Override
     public void translate(TryBlock tryBlock) {
         Arguments.ensureNotNull(tryBlock, "null is not a valid argument for ET.translate()");
         this.returns(() -> {

@@ -17,21 +17,19 @@
  */
 package org.infrastructurebuilder.util.versions;
 
+import static org.infrastructurebuilder.util.versions.GAVBasic.BASIC_PACKAGING;
+import static org.infrastructurebuilder.util.versions.GAVBasic.DELIMITER;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
 
-import org.apiguardian.api.API;
-import org.infrastructurebuilder.exceptions.IBException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.infrastructurebuilder.util.versions.GAVBasic.*;
 
 class DefaultGAVBasicTest {
 
@@ -135,6 +133,14 @@ class DefaultGAVBasicTest {
   void testIsSnapshot() {
     assertFalse(this.gav.isSnapshot());
     assertTrue(this.sps.isSnapshot());
+  }
+
+  @Test
+  void testEquals() {
+    assertEquals(this.gav, this.gav);
+    assertNotEquals("", this.gav);
+    assertEquals(0, this.gav.compareTo(this.gav));
+    assertThrows(NullPointerException.class, () -> this.gav.compareTo(null));
   }
 
 }

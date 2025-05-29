@@ -16,6 +16,17 @@ public interface ExceptionTranslator {
     return returns(invokable);
   }
 
+  /**
+   * <p>This swallows any exceptions.  It should only be used with
+   * specific circumstances, like closing an open resource where
+   * you dont care if there's an error.</p>
+   *
+   * <p>Note that you pretty much always care if there's an error.</p>
+   *
+   * @param tryBlock
+   */
+  void swallow(TryBlock tryBlock);
+
   ExceptionTranslatorConfigurer newConfiguration();
 
 }
