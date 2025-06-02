@@ -190,6 +190,7 @@
     <jsch.version>0.1.55</jsch.version>
     <json.version>20250517</json.version>
     <json.skema.version>0.23.0</json.skema.version>
+    <json.schema.validator.version>1.5.7</json.schema.validator.version>
     <jsonassert.version>1.5.1.1</jsonassert.version>
     <jsonschema2pojo.version>1.2.2</jsonschema2pojo.version>
     <jsoup.version>1.20.1</jsoup.version>
@@ -425,6 +426,11 @@
         <artifactId>itextpdf</artifactId>
         <version>${itextpdf.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.networknt</groupId>
+    	<artifactId>json-schema-validator</artifactId>
+    	<version>${json.schema.validator.version}</version>
+	  </dependency>
       <dependency>
         <groupId>com.novocode</groupId>
         <artifactId>junit-interface</artifactId>
