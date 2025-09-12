@@ -428,8 +428,8 @@
       </dependency>
       <dependency>
         <groupId>com.networknt</groupId>
-    	<artifactId>json-schema-validator</artifactId>
-    	<version>${json.schema.validator.version}</version>
+        <artifactId>json-schema-validator</artifactId>
+        <version>${json.schema.validator.version}</version>
 	  </dependency>
       <dependency>
         <groupId>com.novocode</groupId>
