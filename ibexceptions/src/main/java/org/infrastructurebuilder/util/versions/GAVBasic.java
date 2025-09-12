@@ -34,12 +34,40 @@ import org.infrastructurebuilder.util.comparators.BasicTComparator;
 import org.infrastructurebuilder.util.comparators.OptComparators;
 import org.infrastructurebuilder.util.comparators.OptComparators.OptionalComparator;
 
-public interface GAVBasic extends Comparable<GAVBasic> {
+public interface GAVBasic { // extends Comparable<GAVBasic> {
   public static final String DELIMITER = ":";
+  public static final String SLASH = "/";
   public static final String BASIC_PACKAGING = "jar";
   public final static OptionalComparator<String> OPTIONAL_STRING_COMPARATOR = OptComparators
       .absentLastComparator(BasicTComparator.STRING_COMPARATOR);
   String SNAPSHOT_DESIGNATOR = "-SNAPSHOT";
+
+  public final static Comparator<GAVBasic> comparator = new Comparator<>() {
+    @Override
+    public int compare(final GAVBasic t, final GAVBasic o) {
+      if (o == null)
+        throw new NullPointerException("compareTo in DefaultGAV was passed a null");
+      if (equals(o))
+        return 0;
+      int cmp = t.getGroupId().compareTo(o.getGroupId());
+      if (cmp == 0) {
+        cmp = t.getArtifactId().compareTo(o.getArtifactId());
+        if (cmp == 0)
+          cmp = OPTIONAL_STRING_COMPARATOR.compare(t.getExtension(), o.getExtension());
+      }
+      if (cmp == 0) {
+        cmp = IBException.cet.returns(() -> {
+          // FIXME Bad comparison
+          return OPTIONAL_STRING_COMPARATOR.compare(t.getVersion(), o.getVersion());
+        });
+      }
+      return cmp;
+    }
+  };
+
+  default int compareTo(final GAVBasic o) {
+    return comparator.compare(this, o);
+  }
 
   default Optional<String> asMavenDependencyGet() {
 
@@ -76,6 +104,11 @@ public interface GAVBasic extends Comparable<GAVBasic> {
     return format("%s:%s:%s%s:%s", getGroupId(), getArtifactId(), getExtension().orElse(BASIC_PACKAGING),
         getClassifier().map(c2 -> DELIMITER + c2).orElse(""),
         getVersion().orElseThrow(() -> new IBException("No string version available")));
+  }
+
+  default String getDefaultURIStringPath() {
+    return format("%s/%s/%s/%s/%s", getGroupId(), getArtifactId(), getVersion().orElse(""), getExtension().orElse(""),
+        getClassifier().orElse(""));
   }
 
   default Optional<String> asModelId() {
@@ -150,27 +183,6 @@ public interface GAVBasic extends Comparable<GAVBasic> {
       return false;
     return true;
 
-  }
-
-  @Override
-  default int compareTo(final GAVBasic o) {
-    if (o == null)
-      throw new NullPointerException("compareTo in DefaultGAV was passed a null");
-    if (equals(o))
-      return 0;
-    int cmp = getGroupId().compareTo(o.getGroupId());
-    if (cmp == 0) {
-      cmp = getArtifactId().compareTo(o.getArtifactId());
-      if (cmp == 0)
-        cmp = OPTIONAL_STRING_COMPARATOR.compare(getExtension(), o.getExtension());
-    }
-    if (cmp == 0) {
-      cmp = IBException.cet.returns(() -> {
-        // FIXME Bad comparison
-        return compareVersion(o);
-      });
-    }
-    return cmp;
   }
 
   default int compareVersion(final GAVBasic otherVersion) {

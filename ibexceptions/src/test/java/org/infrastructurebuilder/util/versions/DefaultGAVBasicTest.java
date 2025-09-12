@@ -18,7 +18,7 @@
 package org.infrastructurebuilder.util.versions;
 
 import static org.infrastructurebuilder.util.versions.GAVBasic.BASIC_PACKAGING;
-import static org.infrastructurebuilder.util.versions.GAVBasic.DELIMITER;
+import static org.infrastructurebuilder.util.versions.GAVBasic.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -43,6 +43,8 @@ class DefaultGAVBasicTest {
   private static final String DEPGETSTRING2 = DEPGETSTRING + DELIMITER + BASIC_PACKAGING + DELIMITER + CLASSIFIER;
   private static final String SIGPATH = GROUPID + DELIMITER + ARTIFACTID + DELIMITER + BASIC_PACKAGING + DELIMITER
       + VERSION;
+  private static final String URIPATH = GROUPID + SLASH + ARTIFACTID + SLASH + VERSION + SLASH + BASIC_PACKAGING + SLASH
+      + "";
   private static final String MODELID = DEPGETSTRING;
   private static final String VERSION2_SNAP = VERSION2 + GAVBasic.SNAPSHOT_DESIGNATOR;
   private static final String SIGPATH_SNAP = GROUPID + DELIMITER + ARTIFACTID + DELIMITER + VERSION2_SNAP;
@@ -111,6 +113,11 @@ class DefaultGAVBasicTest {
   @Test
   void testDefaultSigPath() {
     assertEquals(SIGPATH, this.gav.getDefaultSignaturePath());
+  }
+
+  @Test
+  void testDefaultURIPath() {
+    assertEquals(URIPATH, this.gav.getDefaultURIStringPath());
   }
 
   @Test
