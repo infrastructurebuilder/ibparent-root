@@ -32,6 +32,7 @@
   <version>111-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <name>${project.artifactId}</name>
   <url>${ib.site.view.url}/</url>
 
   <modules>
