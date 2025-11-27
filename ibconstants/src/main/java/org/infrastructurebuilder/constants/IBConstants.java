@@ -20,8 +20,10 @@ package org.infrastructurebuilder.constants;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -77,7 +79,7 @@ public interface IBConstants {
   String TEXT_TSV = "text/tab-separated-values";
   String TEXT_TSV_WITH_HEADER = TEXT_TSV + HEADER;
   String VIDEO_AVI_1 = "video/avi";
-//   String LIQUIBASE_SCHEMA = "application/liquibase-schema+xml";
+  //   String LIQUIBASE_SCHEMA = "application/liquibase-schema+xml";
 
   String JAVA_LANG_STRING = "java.lang.String";
   String JSONSTRUCT = "org.json.JSONObject";
@@ -223,5 +225,8 @@ public interface IBConstants {
   String TIMESTAMP_FORMATTER = "timestamp.formatter";
   String TIME_FORMATTER = "time.formatter";
   String DATE_FORMATTER = "date.formatter";
+
+  public static final Duration FOREVER_DURATION = Duration.parse("PT87660000H");
+  public static final Duration NEVER_DURATION = Duration.ofSeconds(-1);
 
 }

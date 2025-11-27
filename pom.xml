@@ -117,6 +117,7 @@
     <discord.jda.version>5.6.1</discord.jda.version>
     <dom4j.version>2.2.0</dom4j.version>
     <dropwizard.version>5.0.0</dropwizard.version>
+    <duckdb.version>1.4.0.0</duckdb.version>
     <egit.github.version>5.1.0.201809111528-r</egit.github.version>
     <elasticmq.version>1.6.14</elasticmq.version>
     <embedded.redis.version>0.6</embedded.redis.version>
@@ -158,6 +159,7 @@
     <jacoco.version>0.8.13</jacoco.version>
     <jandex.maven.plugin.version>1.2.3</jandex.maven.plugin.version>
     <jarsigner.skip>true</jarsigner.skip>
+    <jash.version>0.0.3</jash.version>
     <java.emoji.java.version>5.1.1</java.emoji.java.version>
     <java.faker.version>1.0.2</java.faker.version>
     <java.semver.version>0.10.2</java.semver.version>
@@ -514,6 +516,12 @@
         <version>${commons.pool.version}</version>
         <scope>provided</scope>
       </dependency>
+      <dependency>
+      <groupId>dev.jbang</groupId>
+      <artifactId>jash</artifactId>
+      <version>${jash.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-jvm-deps</artifactId>
@@ -988,6 +996,11 @@
         <artifactId>dom4j</artifactId>
         <version>${dom4j.version}</version>
       </dependency>
+      <dependency>
+		<groupId>org.duckdb</groupId>
+		<artifactId>duckdb_jdbc</artifactId>
+	    <version>${duckdb.version}</version>
+	  </dependency>
       <dependency>
         <groupId>org.eclipse.jgit</groupId>
         <artifactId>org.eclipse.jgit</artifactId>
@@ -1982,6 +1995,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
             <configuration>
+              <disableNoFonts>true</disableNoFonts>
               <detectJavaApiLink>false</detectJavaApiLink>
               <additionalJOption>-Xdoclint:none</additionalJOption>
               <additionalOptions>
