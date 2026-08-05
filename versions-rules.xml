@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ruleset for org.codehaus.mojo:versions-maven-plugin.
+
+  Wired in via the `versions-rules` profile in pom.xml, which activates only when
+  this file is present, so projects that inherit the parent without it are unaffected.
+
+  Two things are suppressed:
+    1. pre-release qualifiers (alpha/beta/M/RC/CR/pre/preview/milestone) for everything
+    2. 4.x and later for artifacts published by the Maven project itself, because those
+       require Maven 4 and this parent targets Maven 3.
+
+  Patterns are full-match (java.util.regex.Matcher#matches), not substring.
+-->
+<ruleset comparisonMethod="maven"
+         xmlns="https://www.mojohaus.org/VERSIONS/RULE/2.21.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://www.mojohaus.org/VERSIONS/RULE/2.21.0 https://www.mojohaus.org/versions/versions-model/xsd/rule-2.21.0.xsd">
+
+  <ignoreVersions>
+    <ignoreVersion type="regex">(?i).*[-_.](?:alpha|beta|m|rc|cr|pre|preview|milestone)[-_.]?\d*</ignoreVersion>
+  </ignoreVersions>
+
+  <rules>
+    <!-- maven-clean/deploy/install/resources/site/source/compiler/plugin/... -->
+    <rule groupId="org.apache.maven.plugins" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">[4-9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- maven-core, maven-model, maven-artifact, maven-archiver, ... -->
+    <rule groupId="org.apache.maven" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">[4-9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- maven-plugin-annotations, maven-plugin-tools-* -->
+    <rule groupId="org.apache.maven.plugin-tools" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">[4-9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- maven-filtering, maven-shared-utils, ... -->
+    <rule groupId="org.apache.maven.shared" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">[4-9]\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
+
+</ruleset>
