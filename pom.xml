@@ -999,7 +999,7 @@
       <dependency>
 		<groupId>org.duckdb</groupId>
 		<artifactId>duckdb_jdbc</artifactId>
-	    <version>${duckdb.version}</version>
+		<version>${duckdb.version}</version>
 	  </dependency>
       <dependency>
         <groupId>org.eclipse.jgit</groupId>
