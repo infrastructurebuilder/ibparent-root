@@ -29,7 +29,7 @@
   </parent>
 
   <artifactId>ibparent-root</artifactId>
-  <version>112-SNAPSHOT</version>
+  <version>112</version>
   <packaging>pom</packaging>
 
   <name>${project.artifactId}</name>
@@ -45,7 +45,7 @@
     <connection>scm:git:${git.url}</connection>
     <developerConnection>scm:git:${git.url}</developerConnection>
     <url>${git.scm.url}</url>
-    <tag>HEAD</tag>
+    <tag>ibparent-root-112</tag>
   </scm>
   <issueManagement>
     <url>${github.url.base}/ibparent/issues</url>
@@ -1454,9 +1454,9 @@
           <artifactId>serviceloader-maven-plugin</artifactId>
           <version>${serviceloader.maven.plugin}</version>
           <configuration>
-            <services/>
-            <excludes/>
-            <includes/>
+            <services />
+            <excludes />
+            <includes />
             <failOnMissingServiceClass>false</failOnMissingServiceClass>
           </configuration>
           <executions>
@@ -1570,7 +1570,7 @@
               </configuration>
             </execution>
           </executions>
-          <configuration/>
+          <configuration />
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
@@ -1668,8 +1668,8 @@
           <version>${maven.cobertura.version}</version>
           <configuration>
             <instrumentation>
-              <ignores/>
-              <excludes/>
+              <ignores />
+              <excludes />
             </instrumentation>
             <check>
               <branchRate>${test.coverage.percentage.required}</branchRate>
@@ -1866,7 +1866,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore/>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
