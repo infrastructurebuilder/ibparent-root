@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.infrastructurebuilder</groupId>
     <artifactId>ibparent-minimal</artifactId>
-    <version>97</version>
+    <version>98</version>
   </parent>
 
   <artifactId>ibparent-root</artifactId>
@@ -92,15 +92,15 @@
     <aspectj.version>1.9.25.1</aspectj.version>
     <assertj.core.version>3.27.7</assertj.core.version>
     <avaje.jsr305.version>1.2</avaje.jsr305.version>
-    <avro.core.version>1.12.1</avro.core.version>
+    <avro.core.version>1.12.2</avro.core.version>
     <aws.sdk.version>1.12.797</aws.sdk.version>
-    <aws.sdkv2.bom.version>2.51.3</aws.sdkv2.bom.version>
+    <aws.sdkv2.bom.version>2.53.2</aws.sdkv2.bom.version>
     <azure.unified.sdk.version>2.63.0</azure.unified.sdk.version>
     <better.files.version>2.17.1</better.files.version>
     <bettercloud.vault.version>5.1.0</bettercloud.vault.version>
     <bouncycastle.version>1.85</bouncycastle.version>
     <chronicle.map.version>2026.1</chronicle.map.version>
-    <classgraph.version>4.8.189</classgraph.version>
+    <classgraph.version>4.8.192</classgraph.version>
     <commons.beanutils.version>1.11.0</commons.beanutils.version>
     <commons.dbcp.version>1.4</commons.dbcp.version>
     <commons.dbcp2.version>2.14.0</commons.dbcp2.version>
@@ -137,7 +137,7 @@
     <github.url.base>https://${github.host}/${team.group.id}</github.url.base>
     <gmavenplus.plugin.version>5.1.0</gmavenplus.plugin.version>
     <google.dagger.version>2.60.1</google.dagger.version>
-    <google.guava.version>33.6.0-jre</google.guava.version>
+    <google.guava.version>33.7.1-jre</google.guava.version>
     <google.inject.guice.version>7.0.0</google.inject.guice.version>
     <google.maps.services.version>2.2.0</google.maps.services.version>
     <google.protobuf.java.version>4.35.1</google.protobuf.java.version>
@@ -148,7 +148,7 @@
     <hikari.cp.version>7.1.0</hikari.cp.version>
     <itextpdf.version>5.5.13.6</itextpdf.version>
     <jackson.annotations.version>2.22</jackson.annotations.version>
-    <jackson.version>2.22.1</jackson.version>
+    <jackson.version>2.22.2</jackson.version>
     <jacoco.it.execution.data.file>${project.build.directory}/jacoco-it.exec</jacoco.it.execution.data.file>
     <jacoco.it.execution.dest.file>${jacoco.it.execution.data.file}</jacoco.it.execution.dest.file>
     <jacoco.maven.plugin.version>${jacoco.version}</jacoco.maven.plugin.version>
@@ -171,14 +171,14 @@
     <jbock.autocommon.version>1.2.3</jbock.autocommon.version>
     <jbock.autovalue.version>1.8.2.2</jbock.autovalue.version>
     <jbock.dapper.version>2.41.2</jbock.dapper.version>
-    <jbock.either.version>1.5.2</jbock.either.version>
+    <jbock.either.version>1.5.3</jbock.either.version>
     <jbock.guava.graph.version>1.0.2</jbock.guava.graph.version>
     <jbock.guava.version>31.0.1.0</jbock.guava.version>
     <jbock.injectable.factory.version>1.0</jbock.injectable.factory.version>
     <jbock.javapoet.version>1.15</jbock.javapoet.version>
-    <jbock.jbock.version>5.22</jbock.jbock.version>
+    <jbock.jbock.version>5.23</jbock.jbock.version>
     <jbock.parmigiano.version>1.02</jbock.parmigiano.version>
-    <jbock.simple.component.version>1.024</jbock.simple.component.version>
+    <jbock.simple.component.version>1.026</jbock.simple.component.version>
     <jbock.truth.version>1.1.3.3</jbock.truth.version>
     <jclouds.version>1.9.0</jclouds.version>
     <jcommander.version>1.82</jcommander.version>
@@ -192,7 +192,7 @@
     <jpastreamer.quarkus.version>3.0.3.Final</jpastreamer.quarkus.version>
     <jpastreamer.version>3.0.4</jpastreamer.version>
     <jsch.version>0.1.55</jsch.version>
-    <json.version>20260719</json.version>
+    <json.version>20260814</json.version>
     <json.skema.version>0.31.0</json.skema.version>
     <json.schema.validator.version>3.0.6</json.schema.validator.version>
     <jsonassert.version>1.5.1.1</jsonassert.version>
@@ -209,7 +209,7 @@
     <kohsuke.github.api.version>1.330</kohsuke.github.api.version>
     <kotlin.version>2.4.10</kotlin.version>
     <lambdaworks.jacks.version>2.5.2</lambdaworks.jacks.version>
-    <logback.version>1.6.1</logback.version>
+    <logback.version>1.6.3</logback.version>
     <!-- was 1.2.3 -->
     <logstash.logback.encoder.version>9.0</logstash.logback.encoder.version>
     <lombok.version>1.18.46</lombok.version>
