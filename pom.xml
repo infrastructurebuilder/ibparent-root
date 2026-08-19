@@ -53,7 +53,7 @@
   </issueManagement>
 
   <properties>
-    <ib.logconfig.version>0.14.4</ib.logconfig.version>
+    <ib.logconfig.version>0.14.5</ib.logconfig.version>
     <ib.urlclasspath.version>1.0.1</ib.urlclasspath.version>
     <maven.bundle.plugin.version>6.1.0</maven.bundle.plugin.version>
     <maven.cobertura.version>2.7</maven.cobertura.version>
@@ -94,7 +94,7 @@
     <avaje.jsr305.version>1.2</avaje.jsr305.version>
     <avro.core.version>1.12.2</avro.core.version>
     <aws.sdk.version>1.12.797</aws.sdk.version>
-    <aws.sdkv2.bom.version>2.53.2</aws.sdkv2.bom.version>
+    <aws.sdkv2.bom.version>2.53.3</aws.sdkv2.bom.version>
     <azure.unified.sdk.version>2.63.0</azure.unified.sdk.version>
     <better.files.version>2.17.1</better.files.version>
     <bettercloud.vault.version>5.1.0</bettercloud.vault.version>
