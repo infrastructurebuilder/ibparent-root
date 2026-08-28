@@ -29,7 +29,7 @@
   </parent>
 
   <artifactId>ibparent-root</artifactId>
-  <version>114</version>
+  <version>115-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>${project.artifactId}</name>
@@ -45,7 +45,7 @@
     <connection>scm:git:${git.url}</connection>
     <developerConnection>scm:git:${git.url}</developerConnection>
     <url>${git.scm.url}</url>
-    <tag>ibparent-root-114</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <url>${github.url.base}/ibparent/issues</url>
